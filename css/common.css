@@ -1,0 +1,231 @@
+@charset "UTF-8";
+
+@import url("font.css");
+@import url("layout.css");
+
+/* base */
+*{ padding: 0; margin: 0; font-family: Montserrat, NanumBarunGothic, "맑은고딕", sans-serif; font-weight: 400; color: #333; }
+li{ list-style: none; }
+a{ text-decoration: none; }
+img{border: none; }
+button{ border: none; }
+.away{ position: absolute; left: -999em; }
+fieldset{ border: none; }
+
+/* =======================공통작업======================= */
+body{ position: relative; }
+
+/* header */
+header{ position: absolute; top: 0; z-index: 5000; width: 100%; height: 100px; }
+header h1{ display: inline-block; height: 100%; }
+header h1 a{ display: block; height: 100%; background-repeat: no-repeat; background-position: center; background-image: url(../images/common/header_logo.png); }
+
+/* footer */
+footer{ width: 100%; overflow: hidden; background-color: #111; }
+footer *{ color: rgba(255,255,255,0.8); font-family: NanumBarunGothic, "맑은고딕", sans-serif; }
+footer h1 a{ display: block; width: 100%; height: 100%; }
+footer .group01 br{ display: none; }
+footer .group01 ul{ overflow: hidden; }
+footer .group01 ul li{ float: left; }
+footer .group01 ul li.first:after{ content: '|'; margin: 0 10px; }
+footer .group02{ overflow: hidden; }
+footer .group02 ul li{ float: left; }
+footer .group02 .snsList .first{ margin-right: 10px; }
+footer .group02 .footerMenu, footer .group02 p{ clear: both; }
+footer .group02 .footerMenu li.first:after{ content: '|'; margin: 0 10px; }
+footer .snsList a{ display: block; width: 40px; height: 40px; background-size: cover; background-repeat: no-repeat; background-position: center; }
+footer .snsList .instaIcon{ background-image: url(../images/common/footer_instagram_icon.png); }
+footer .snsList .youtubeIcon{ background-image: url(../images/common/footer_youtube_icon.png); }
+
+
+/* =======================공통작업======================= */
+
+
+
+/* ======================= desktop ======================= */
+@media screen and (min-width: 1024px){
+    *{ font-size: 16px; } 
+	
+	/* panel */
+	.panelBox{ display: none; }
+    
+    /* header */
+    header{ padding: 0 80px; box-sizing: border-box; transition: 0.3s; text-align: center; }
+    .gnb{ float: left; height: 100px; }
+    .gnb > ul > li{ position: relative; float: left; height: 100%; line-height: 99px; }
+    .gnb > ul > li.first{ margin-right: 80px; }
+    .gnb > ul > li a{ font-family: NanumBarunGothic, '맑은고딕', sans-serif; font-size: 24px; font-weight: 700; }
+	header h1 a{ width: 168px; }
+    .topNav{ float: right; }
+    .topNav .topList > li{ float: left; line-height: 99px; }
+    .topNav .topList > li > a{ font-family: NanumBarunGothic, '맑은고딕', sans-serif; font-size: 16px; font-weight: 700; }
+    .topNav > ul > li > a:after{ position: relative; top: -1px; content: '|'; margin: 0 10px; font-size: 15px; }
+	.topNav > ul > li.help{ display: none; }
+	.topNav > ul > li.last{ position: relative; }
+	.topNav > ul > li.last > a{ position: relative; }
+	.topNav > ul > li.last > a:after{ content: ''; }
+	.topNav > ul > li.last > a:before{ display: block; content: ''; position: absolute; right: 0; top: 3px; width: 5px; height: 5px; border: 1px solid #333; border-left: none; border-top: none; transform: rotate(45deg); }
+	.topNav .languageBox{ display: none; position: absolute; top: 65px; left: -3px; width: 55px; padding: 5px 10px; box-sizing: border-box; background-color: #7C2629; box-shadow: 5px 5px 10px rgb(0 0 0 / 10%); }
+	.topNav .languageBox li{ line-height: 25px; }
+    .topNav .languageBox a{ color: #fff; font-size: 12px; }
+	header .panelIcon{ display: none; }
+    
+	/* hover & active */
+	header:hover{ background-color: #fff; }
+	.topNav li.last a.active:before{ transform: rotate(-135deg); top: 6px; }
+	/*.topNav li.last.active .languageBox{ display: block; }*/
+	.topNav .languageBox a:hover{ font-weight: 700; }
+    
+    
+    /* footer */
+    footer{ padding: 75px 80px; box-sizing: border-box; }
+    footer h1 a{ padding: 27px 0; box-sizing: border-box; }
+    footer .group01{ padding: 30px 0; box-sizing: border-box; }
+    footer .group01 ul{ overflow: hidden; margin-top: 10px; }
+    footer .group01 ul li.first:after{ font-size: 14px; }
+    footer .group02 ul{ float: right; overflow: hidden; }
+    footer .group02 .snsList{ margin-bottom: 20px; }
+    footer .group02 .footerMenu{ height: 30px; }
+    footer .group02 p{ text-align: right; }
+}
+/* ======================= desktop ======================= */
+
+
+
+/* ======================= large desktop ======================= */
+@media screen and (min-width: 1280px){
+    
+}
+/* ======================= large desktop ======================= */
+
+/* ======================= tablet ======================= */
+@media screen and (max-width: 1023px){
+    *{ font-size: 14px; }
+	
+	/* header */
+	header .panelIcon{ position: relative; float: right; width: 100px; height: 100px; padding: 37px; box-sizing: border-box; background-color: #800020; z-index: 6000; }
+	.panelIcon a{ position: relative; display: block; width: 100%; height: 100%; }
+	.panelIcon span{ display: block; height: 2px; margin: 4px 0; background-color: #fff; transition: 0.5s;}
+	.panelIcon .line01{ width: 100%; }
+	.panelIcon .line02{ width: 60%; }
+	.panelIcon .line03{ width: 85%; }
+	.gnb{ position: fixed; top: 0; right: -100%; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover; background-image: url(../images/common/panel_bg.png); transition: 0.6s; }
+	.gnb > ul{ margin-top: 170px; margin-left: 40px; }
+	.gnb > ul > li:first-child{ margin-bottom: 20px; }
+    .topNav{ position: fixed; right: -100%; bottom: 120px; width: 100%; box-sizing: border-box; transition: 0.6s; }
+    .topNav > ul > li{ margin-bottom: 20px; }
+	.topNav > ul > li.cart{ display: none; }
+	.gnb > ul > li > a, .topNav > ul > li > a{ color: #fff; font-size: 60px; font-weight: 700; }
+	.topNav > ul > li > a{ margin-left: 40px; font-size: 30px; font-weight: 600; }
+    .topNav > ul > li.last > a{ display: none; }
+    .topNav .languageBox{ position: fixed; bottom: 0; width: 100%; height: 75px; background-color: #800020; overflow: hidden; }
+    .topNav .languageBox li{ float: left; line-height: 75px; }
+    .topNav .languageBox a{ color: #fff; font-size: 20px; font-weight: 700; }
+    .topNav .languageBox li.first a{ margin-left: 40px; }
+    .topNav .languageBox li.first a:after{ position: relative; top: -1px; content: '|'; font-weight: 300; font-size: 16px; margin: 0 15px; }
+	header h1{ position: relative; z-index: 1000; padding-left: 25px; }
+	header h1 a{ width: 135px; background-size: 135px; transition: 0.3s; }
+    
+    /* animation on */
+    .panelIcon a.on .line01{ -webkit-animation: lineActiveAnimation .8s cubic-bezier(0.445,0.05,0.55,0.95);
+    animation: lineActiveAnimation .8s cubic-bezier(0.445,0.05,0.55,0.95); }
+	.panelIcon a.on .line02{ -webkit-animation: lineActiveAnimation .9s cubic-bezier(0.445,0.05,0.55,0.95);
+    animation: lineActiveAnimation .9s cubic-bezier(0.445,0.05,0.55,0.95); }
+	.panelIcon a.on .line03{ -webkit-animation: lineActiveAnimation 1s cubic-bezier(0.445,0.05,0.55,0.95);
+    animation: lineActiveAnimation 1s cubic-bezier(0.445,0.05,0.55,0.95); }
+    
+    /* active */
+    .panelIcon a.active .line01{ transform: translateY(6px) rotate(-45deg); transition-delay: 0.5s; transition: all 0.5s; }
+	.panelIcon a.active .line02{ opacity: 0; }
+	.panelIcon a.active .line03{ transform: translateY(-6px) rotate(45deg); width: 100%; transition-delay: 0.5s; transition: all 0.5s; }
+    .gnb.active{ right: 0; }
+	.gnb.active + h1 a{ background-image: url(../images/common/footer_logo.png); transition-delay: 0.5s; }
+    .topNav.active{ right: 0; }
+    
+    /* footer */
+    footer{ position: relative; padding: 75px 40px; box-sizing: border-box; }
+    footer h1{ position: relative; left: -18px; margin-bottom: 20px; }
+    footer .group01{ margin-bottom: 20px; }
+    footer .group01 ul, footer .group02 p{ margin-top: 8px; }
+    footer .group02 .snsList{ position: absolute; right: 40px; top: 75px; }
+    footer .group02 .footerMenu{ overflow: hidden; }
+    
+    /* toTop */
+    #toTop{ background-position: left -70px; }
+}
+/* ======================= tablet ======================= */
+
+
+
+/* ======================= mobile ======================= */
+@media screen and (max-width: 767px){
+    *{ font-size: 12px; }  
+	
+	/* header */
+	header{ height: 74px; }
+    header .panelIcon{ width: 74px; height: 74px; padding: 24px; box-sizing: border-box; }
+	.panelIcon a{ display: block; width: 100%; height: 100%; }
+	.panelIcon span{ display: block; height: 2px; margin: 4px 0; background-color: #fff; }
+	.panelIcon .line01{ width: 100%; }
+	.panelIcon .line02{ width: 60%; }
+	.panelIcon .line03{ width: 85%; }
+    .gnb > ul{ margin-top: 135px; margin-left: 15px; }
+    .gnb > ul > li > a, .topNav > ul > li > a{ font-size: 30px; }
+    .topNav{ bottom: 90px; }
+    .topNav > ul > li > a{ margin-left: 15px; font-size: 20px; font-weight: 600; }
+    .topNav .languageBox{ width: 100%; height: 55px; }
+    .topNav .languageBox li{ line-height: 55px; }
+    .topNav .languageBox a{ font-size: 14px; }
+    .topNav .languageBox li.first a{ margin-left: 15px; }
+    .topNav .languageBox li.first a:after{ font-size: 12px; }
+	header h1{ display: inline-block; padding: 24px 5px; box-sizing: border-box; }
+	header h1 a{ width: 74px; background-size: 74px; }
+    
+    /* footer */
+    footer{ position: relative; padding: 30px 15px 100px; box-sizing: border-box; }
+    footer h1{ position: relative; left: -10px; margin-bottom: 20px; }
+    footer h1 a img{ width: 74px; }
+    footer .group01{ margin-bottom: 10px; }
+    footer .group01 .mobile_none{ display: none; }
+    footer .group01 br{ display: block; }
+    footer .group01 p{ line-height: 20px; }
+    footer .group01 ul, footer .group02 p{ margin-top: 5px; }
+    footer .group02 .snsList{ position: absolute; right: 15px; top: 30px; }
+    footer .snsList a{ width: 32px; height: 32px; }
+    
+    /* toTop */
+    #toTop{ position: absolute; bottom: 25px; right: calc(50% - 35px); width: 70px; height: 30px; background-image: url(../images/common/mobile_topBtn_bg.png); background-position: center; background-size: cover; }
+    #toTopHover{ width: 70px; height: 30px; }
+}
+
+/* ======================= mobile ======================= */
+
+
+
+/* ======================= iphone5 ======================= */
+@media screen and (max-width: 320px){
+    *{ font-size: 12px; }    
+	
+	/* header */
+	header{ height: 60px; }
+	header h1{ padding: 17px 5px; } 
+	header .panelIcon{ width: 60px; height: 60px; padding: 20px; }
+    .gnb > ul{ margin-top: 115px; }
+}
+/* ======================= iphone5 ======================= */
+
+/* animation */
+@-webkit-keyframes lineActiveAnimation {
+    0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:center right;transform-origin:center right}
+    49%{-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center right;transform-origin:center right}
+    50%{-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center left;transform-origin:center left}
+    99%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:center left;transform-origin:center left}
+    100%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:center left;transform-origin:center left}
+}
+@keyframes lineActiveAnimation {
+    0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:center right;transform-origin:center right}
+    49%{-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center right;transform-origin:center right}
+    50%{-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center left;transform-origin:center left}
+    99%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:center left;transform-origin:center left}
+    100%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-transform-origin:center left;transform-origin:center left}
+}

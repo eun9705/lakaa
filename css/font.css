@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* NanumBarunGothic */
+@font-face{ 
+    font-family: NanumBarunGothic;
+    font-weight: 300;
+    src: local(※), url(../fonts/NanumBarunGothicLight.woff) format('woff');
+}
+@font-face{ 
+    font-family: NanumBarunGothic;
+    font-weight: 400;
+    src: local(※), url(../fonts/NanumBarunGothic.woff) format('woff');
+}
+@font-face{ 
+    font-family: NanumBarunGothic;
+    font-weight: 700;
+    src: local(※), url(../fonts/NanumBarunGothicBold.woff) format('woff');
+}
+
+/* Montserrat */
+@font-face{ 
+    font-family: Montserrat;
+    font-weight: 400;
+    src: local(※), url(../fonts/Montserrat-Regular.woff) format('woff');
+}
+@font-face{ 
+    font-family: Montserrat;
+    font-weight: 500;
+    src: local(※), url(../fonts/Montserrat-Medium.woff) format('woff');
+}
+@font-face{ 
+    font-family: Montserrat;
+    font-weight: 600;
+    src: local(※), url(../fonts/Montserrat-SemiBold.woff) format('woff');
+}
+@font-face{ 
+    font-family: Montserrat;
+    font-weight: 700;
+    src: local(※), url(../fonts/Montserrat-Bold.woff) format('woff');
+}
+@font-face{ 
+    font-family: Montserrat;
+    font-weight: 900;
+    src: local(※), url(../fonts/Montserrat-Black.woff) format('woff');
+}
+
+/* ShipporiMincho */
+@font-face{ 
+    font-family: ShipporiMincho;
+    font-weight: 700;
+    src: local(※), url(../fonts/ShipporiMincho-Bold.woff) format('woff');
+}
